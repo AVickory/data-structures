@@ -17,6 +17,7 @@ var Stack = function() {
       length--;
       return storage[length];
     }
+    return undefined;
   };
 
   someInstance.size = function() {
