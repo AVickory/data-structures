@@ -47,7 +47,9 @@ Trie.prototype.getWordsWithPrefix = function (pref) {
     }
   }
 
-  getWord(prefNode, pref)
+  if(prefNode !== null) {
+    getWord(prefNode, pref);
+  }
 
   return res;
 };
@@ -79,6 +81,7 @@ console.log(t.containsWord('d'));
 console.log(t.containsWord('de'));
 console.log(t.containsWord('derp'));
 
+console.log(t.getWordsWithPrefix('c'));
 console.log(t.getWordsWithPrefix('d'));
 console.log(t.getWordsWithPrefix('da'));
 console.log(t.getWordsWithPrefix('de'));
