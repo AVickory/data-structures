@@ -17,12 +17,20 @@ Trie.prototype.add = function (word) {
     if(this.children[newChar] === undefined) {
       this.children[newChar] = new Trie();
     }
-    this.add(word.slice(1));
+    this.children[newChar].add(word.slice(1));
   }
 };
 
-Trie.prototype.containsWord = function (target) {
-
+Trie.prototype.containsWord = function (word) {
+  if(word === '') {
+    return this.isWord;
+  } else {
+    var newChar = word[0];
+    if(this.children[newChar] === undefined) {
+      return false
+    }
+    return this.children[newChar].containsWord(word.slice(1));
+  }
 };
 
 Trie.prototype.containsPrefix = function (pref) {
@@ -36,6 +44,3 @@ Trie.prototype.getWordsWithPrefix = function (pref) {
 
 
 var t = new Trie();
-t.add('');
-t.containsWord('') === true
-t.containsWord('a') ==== false
