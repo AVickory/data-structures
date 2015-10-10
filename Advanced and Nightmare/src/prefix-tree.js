@@ -68,22 +68,22 @@ Trie.prototype.traverseTo = function (pref) {
 
 
 
-var t = new Trie();
-t.add('de');
-t.add('da');
-t.add('dog');
-t.add('dogs');
-t.add('dalmations');
+// var t = new Trie();
+// t.add('de');
+// t.add('da');
+// t.add('dog');
+// t.add('dogs');
+// t.add('dalmations');
 
-console.log(t);
-console.log(t.containsWord(''));
-console.log(t.containsWord('d'));
-console.log(t.containsWord('de'));
-console.log(t.containsWord('derp'));
+// console.log(t);
+// console.log(t.containsWord(''));
+// console.log(t.containsWord('d'));
+// console.log(t.containsWord('de'));
+// console.log(t.containsWord('derp'));
 
-console.log(t.getWordsWithPrefix('c'));
-console.log(t.getWordsWithPrefix('d'));
-console.log(t.getWordsWithPrefix('da'));
-console.log(t.getWordsWithPrefix('de'));
-console.log(t.getWordsWithPrefix('do'));
-console.log(t.getWordsWithPrefix('dog'));
+// console.log(t.getWordsWithPrefix('c'));
+// console.log(t.getWordsWithPrefix('d'));
+// console.log(t.getWordsWithPrefix('da'));
+// console.log(t.getWordsWithPrefix('de'));
+// console.log(t.getWordsWithPrefix('do'));
+// console.log(t.getWordsWithPrefix('dog'));
